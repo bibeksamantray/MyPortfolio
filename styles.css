@@ -1,0 +1,315 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text */
+    line-height: 1.6;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #1F1F1F; /* Dark header background */
+    padding: 30px 0;
+    text-align: center;
+}
+
+header .profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007BFF; /* Primary color */
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    color: #007BFF; /* Primary color */
+    font-weight: 600;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    color: #aaa; /* Light gray */
+}
+
+/* Navigation */
+nav {
+    background-color: #1F1F1F; /* Dark navigation background */
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF; /* Primary color */
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #13e243
+    ; /* Green on hover */
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 0;
+    border-bottom: 1px solid #333; /* Dark border */
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #E0E0E0; /* Light text */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.education-item {
+    background-color: #1F1F1F; /* Dark background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    margin-bottom: 20px;
+}
+
+.education-item h3 {
+    font-size: 1.5rem;
+    color: #13e243; /* Green */
+}
+
+.education-item p {
+    font-size: 1rem;
+    color: #ccc; /* Light gray */
+}
+
+.education-item ul {
+    margin-top: 10px;
+    list-style: none;
+    color: #ccc; /* Light gray */
+}
+
+.education-item ul li {
+    margin-bottom: 8px;
+}
+
+/* Certification Section */
+.certification-item {
+    background-color: #1F1F1F; /* Dark background */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    margin-bottom: 15px;
+}
+
+.certification-item p {
+    font-size: 1rem;
+    color: #ccc; /* Light gray */
+}
+
+.certification-item a {
+    color: #007BFF; /* Primary color */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.certification-item a:hover {
+    text-decoration: underline;
+}
+
+/* Experience Section */
+.experience-item {
+    background-color: #1F1F1F; /* Dark background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    color: #13e243
+    ; /* Green */
+}
+
+.experience-item ul {
+    margin-top: 10px;
+    list-style: none;
+}
+
+/* Skills Section */
+.skill-set {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.skill-category {
+    flex: 1 1 22%; 
+    background-color: #2D2D2D; /* Darker background */
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px; 
+}
+
+.skill-category h3 {
+    color: #13e243
+    ; 
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    color: #ccc; /* Light gray */
+}
+
+.skill-category ul li {
+    margin-bottom: 5px;
+}
+
+/* Projects Section */
+.project {
+    background-color: #2D2D2D; /* Darker background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); 
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    color: #13e243
+    ; 
+    transition: color 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.project h3 a {
+    color: #13e243
+    ; 
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.project ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project h3 a:hover {
+    color: #13e243
+    ; /* Green */
+    text-decoration: underline;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #1F1F1F; /* Dark background */
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #E0E0E0; /* Light text */
+}
+
+.contact-message {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc; /* Light gray */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #007BFF; /* Primary color */
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #0056b3; /* Darker primary color */
+    transform: translateY(-3px);
+}
+
+/* Specific icon colors on hover - overrides the secondary color */
+.social-links a:hover.fa-briefcase {
+    background-color: #8e44ad;
+}
+
+.social-links a:hover.fa-envelope {
+    background-color: #d44638;
+}
+
+.social-links a:hover.fa-linkedin-in {
+    background-color: #0077b5;
+}
+
+.social-links a:hover.fa-github {
+    background-color: #333;
+}
+
+.social-links a:hover.fa-code {
+    background-color: #f79f1b;
+}
+
+/* Footer */
+footer {
+    background-color: #1F1F1F; /* Dark footer background */
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    color: #ccc; /* Light gray */
+}
+
+/* Hover Effects */
+a:hover {
+    color: #13e243
+    ; /* Green on hover */
+}
