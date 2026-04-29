@@ -1,358 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibek Samantray | Full Stack Developer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibek Samantray — Full Stack Developer</title>
+  <meta name="description" content="Full Stack Developer specializing in MERN stack, FastAPI, and AI-powered systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="profile-header">
-                <img src="your-image.jpg" alt="Bibek Samantray" class="profile-pic">
-                <div class="text-content">
-                    <h1>Bibek Samantray</h1>
-                    <p>Full Stack Developer | Building the Web of Tomorrow</p>
-                </div>
-            </div>
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">BS<span class="logo-dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certification" class="nav-link">Certs</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="#" class="resume-btn" download>
+          <i class="fas fa-download"></i>
+          <span>Resume</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#about" class="mob-link">About</a></li>
+        <li><a href="#experience" class="mob-link">Experience</a></li>
+        <li><a href="#education" class="mob-link">Education</a></li>
+        <li><a href="#skills" class="mob-link">Skills</a></li>
+        <li><a href="#projects" class="mob-link">Projects</a></li>
+        <li><a href="#certification" class="mob-link">Certifications</a></li>
+        <li><a href="#contact" class="mob-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <div class="hero-name-wrap reveal-up" style="animation-delay:.1s">
+        <h1 class="hero-name">Bibek<br><span class="name-accent">Samantray</span></h1>
+      </div>
+      <p class="hero-title reveal-up" style="animation-delay:.2s">
+        Full Stack Developer
+        <span class="title-separator">—</span>
+        Building the Web of Tomorrow
+      </p>
+      <p class="hero-sub reveal-up" style="animation-delay:.3s">
+        MERN · FastAPI · AI/LLM · AWS · Cloud Architecture
+      </p>
+      <div class="hero-cta reveal-up" style="animation-delay:.4s">
+        <a href="#projects" class="btn-primary">
+          View My Work
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-image reveal-right" style="animation-delay:.2s">
+      <div class="img-frame">
+        <img src="your-image.jpg" alt="Bibek Samantray" class="profile-pic">
+        <div class="img-border"></div>
+      </div>
+      <div class="floating-tag tag-1">
+        <i class="fas fa-code"></i> MERN Stack
+      </div>
+      <div class="floating-tag tag-2">
+        <i class="fas fa-brain"></i> AI / LLM
+      </div>
+      <div class="floating-tag tag-3">
+        <i class="fab fa-aws"></i> AWS
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">Scroll</span>
+    </a>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label">About</div>
+      <h2 class="section-title reveal-up">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text reveal-up">
+          <p>Results-driven Full-Stack Software Developer with 4 months of professional internship experience in building scalable web applications and AI-powered systems. Proficient in MERN stack development, FastAPI backend services, and integrating large language models for applications such as resume screening, audio-to-notes generation, and agentic AI workflows.</p>
+          <p>Experienced in deploying secure, cloud-based solutions on AWS with JWT authentication and CI/CD pipelines. Strong foundation in data structures, algorithms, NLP, and software engineering principles, with a proven ability to deliver production-ready solutions in agile development environments.</p>
+          <div class="about-links">
+            <a href="https://www.linkedin.com/in/bibeksamantray2003/" target="_blank" rel="noopener" class="about-social">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            <a href="https://github.com/bibeksamantray" target="_blank" rel="noopener" class="about-social">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://leetcode.com/u/Bibek_Samantray/" target="_blank" rel="noopener" class="about-social">
+              <i class="fas fa-code"></i> LeetCode
+            </a>
+          </div>
         </div>
-    </header>
-
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certification">Certification</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Results-driven Full-Stack Software Developer with 4 months of professional internship experience in building scalable web applications and AI-powered systems. Proficient in MERN stack development, FastAPI backend services, and integrating large language models for applications such as resume screening, audio-to-notes generation, and agentic AI workflows. Experienced in deploying secure, cloud-based solutions on AWS with JWT authentication and CI/CD pipelines. Strong foundation in data structures, algorithms, NLP, and software engineering principles, with a proven ability to deliver production-ready solutions in agile development environments.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">3+</div>
-                        <div class="stat-label">Years Coding</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Projects</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">4+</div>
-                        <div class="stat-label">Certifications</div>
-                    </div>
-                </div>
-            </div>
+        <div class="about-stats reveal-up" style="animation-delay:.15s">
+          <div class="stat-card">
+            <span class="stat-num" data-target="3">0</span><span class="stat-plus">+</span>
+            <p>Years Coding</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-target="10">0</span><span class="stat-plus">+</span>
+            <p>Projects</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-target="4">0</span><span class="stat-plus">+</span>
+            <p>Certifications</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Software Developer Intern | Hebbale Academy</h3>
-                <p><strong>Duration:</strong> May 2025 – June 2025 | <strong>Location:</strong> Remote</p>
-                <ul>
-                    <li>Developed Agentic AI-powered home inventory management application enabling natural language-based item control and tracking</li>
-                    <li>Implemented multi-agent workflows using Google AI Development Kit (ADK) to automate complex multi-step inventory operations</li>
-                    <li>Built secure FastAPI backend infrastructure on AWS with JWT authentication for scalable and secure data management</li>
-                    <li>Designed and deployed cloud-based architecture using multiple AWS services for high availability and performance optimization</li>
-                    <li>Enhanced application functionality through iterative development and integration of advanced AI features</li>
-                    <li>Collaborated with cross-functional teams using Git version control and managed CI/CD workflows for continuous deployment</li>
-                </ul>  
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-label">Experience</div>
+      <h2 class="section-title reveal-up">Where I've Worked</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal-up">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <span class="tl-company">Hebbale Academy</span>
+                <h3 class="tl-role">Software Developer Intern</h3>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-period"><i class="far fa-calendar-alt"></i> May – Jun 2025</span>
+                <span class="tl-location"><i class="fas fa-globe"></i> Remote</span>
+              </div>
             </div>
-            <br>
-            <div class="experience-item">
-                <h3>Full Stack Developer Intern | Edu-Versity</h3>
-                <p><strong>Duration:</strong> November 2024 – December 2024 | <strong>Location:</strong> Remote</p>
-                <ul>
-                    <li>Completed intensive industrial training program specializing in MERN stack (MongoDB, Express.js, React.js, Node.js) development</li>
-                    <li>Designed and developed responsive frontend interfaces using HTML5, CSS3, JavaScript, and React.js for optimal user experience</li>
-                    <li>Built RESTful APIs and server-side applications using Node.js and Express.js with MongoDB database integration</li>
-                    <li>Developed and deployed real-time e-voting system featuring user authentication and role-based access control</li>
-                    <li>Implemented secure database operations and optimized application performance for production deployment environments</li>
-                    <li>Applied agile methodologies and version control best practices throughout the software development lifecycle</li>
-                </ul>  
+            <ul class="tl-points">
+              <li>Developed Agentic AI-powered home inventory management application enabling natural language-based item control and tracking</li>
+              <li>Implemented multi-agent workflows using Google AI Development Kit (ADK) to automate complex multi-step inventory operations</li>
+              <li>Built secure FastAPI backend infrastructure on AWS with JWT authentication for scalable and secure data management</li>
+              <li>Designed and deployed cloud-based architecture using multiple AWS services for high availability and performance optimization</li>
+              <li>Collaborated with cross-functional teams using Git version control and managed CI/CD workflows for continuous deployment</li>
+            </ul>
+            <div class="tl-tags">
+              <span>FastAPI</span><span>Google ADK</span><span>AWS</span><span>JWT</span><span>CI/CD</span>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2>Education</h2>
-            
-            <div class="education-item">
-                <h3>Master of Computer Applications (MCA) | Masters</h3>
-                <p><strong>Gandhi Institute of Engineering & Technology University, Gunupur, India</strong></p>
-                <p><strong>CGPA:</strong> 7.97/10 | <strong>Duration:</strong> 2024 – 2026</p>
-                <p><strong>Relevant Coursework:</strong> Design & Analysis of Algorithms • Artificial Intelligence • Operating Systems • Internet & Web Technology • Cloud Computing</p>
+        <div class="timeline-item reveal-up" style="animation-delay:.1s">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <span class="tl-company">Edu-Versity</span>
+                <h3 class="tl-role">Full Stack Developer Intern</h3>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-period"><i class="far fa-calendar-alt"></i> Nov – Dec 2024</span>
+                <span class="tl-location"><i class="fas fa-globe"></i> Remote</span>
+              </div>
             </div>
-            
-            <div class="education-item">
-                <h3>Bachelor of Computer Applications (BCA) | Bachelors</h3>
-                <p><strong>Berhampur University, Berhampur, India</strong> </p>
-                <p><strong>CGPA:</strong> 8.70/10 | <strong>Duration:</strong> 2021 – 2024</p>
-                <p><strong>Relevant Coursework:</strong> Data Structures & Algorithms • Software Engineering • Database Management Systems • Object-Oriented Programming</p>
+            <ul class="tl-points">
+              <li>Completed intensive industrial training in MERN stack (MongoDB, Express.js, React.js, Node.js) development</li>
+              <li>Designed and developed responsive frontend interfaces using HTML5, CSS3, JavaScript, and React.js</li>
+              <li>Built RESTful APIs and server-side applications using Node.js and Express.js with MongoDB integration</li>
+              <li>Developed and deployed real-time e-voting system featuring user authentication and role-based access control</li>
+              <li>Applied agile methodologies and version control best practices throughout the software development lifecycle</li>
+            </ul>
+            <div class="tl-tags">
+              <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Express.js</span><span>REST API</span>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Skills & Expertise</h2>
-            <div class="skill-set">
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>C & C++</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Front-end</h3>
-                    <ul>
-                        <li>HTML5 & CSS3</li>
-                        <li>React.js</li>
-                        <li>Tailwind CSS</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Back-end</h3>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>RESTful APIs</li>
-                        <li>FastAPI</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Databases</h3>
-                    <ul>
-                        <li>MySQL</li>
-                        <li>MongoDB</li>
-                        <li>Database Design</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Tools & Platforms</h3>
-                    <ul>
-                        <li>AWS</li>
-                        <li>Git & GitHub</li>
-                        <li>VS Code</li>
-                        <li>MS Office</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Core Competencies</h3>
-                    <ul>
-                        <li>Data Structures & Algorithms</li>
-                        <li>OOP</li>
-                        <li>SDLC & Agile</li>
-                        <li>Problem Solving</li>
-                    </ul>
-                </div>
+  <!-- ── EDUCATION ── -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-label">Education</div>
+      <h2 class="section-title reveal-up">Academic Background</h2>
+      <div class="edu-grid">
+        <div class="edu-card reveal-up">
+          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="edu-body">
+            <span class="edu-degree">Master of Computer Applications (MCA)</span>
+            <h3 class="edu-school">Gandhi Institute of Engineering & Technology University</h3>
+            <p class="edu-location"><i class="fas fa-map-marker-alt"></i> Gunupur, India</p>
+            <div class="edu-meta">
+              <span class="edu-cgpa"><i class="fas fa-star"></i> CGPA: 7.97 / 10</span>
+              <span class="edu-year">2024 – 2026</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <h3><a href="#" target="_blank">AI-Powered Resume Screening System</a></h3>
-                    </div>
-                    <p>An AI-driven resume screening system that automates resume parsing and candidate–job matching using LLMs and NLP.</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">FastAPI</span>
-                        <span class="tech-badge">Ollama</span>
-                        <span class="tech-badge">NLP</span>
-                        <span class="tech-badge">HTML/CSS/JS</span>
-                    </div>
-                    <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="project">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-microphone"></i>
-                        </div>
-                        <h3><a href="#" target="_blank">AI-Powered Audio-to-Notes Generator</a></h3>
-                    </div>
-                    <p>A fully local, open-source system that converts lecture audio into transcripts and AI-generated notes using LLMs.</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">FastAPI</span>
-                        <span class="tech-badge">MongoDB</span>
-                        <span class="tech-badge">Ollama</span>
-                        <span class="tech-badge">Faster-Whisper</span>
-                    </div>
-                    <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="project">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-vote-yea"></i>
-                        </div>
-                        <h3><a href="#" target="_blank">E-Voting System</a></h3>
-                    </div>
-                    <p>A secure, role-based voting application with JWT authentication, real-time vote tracking, and a responsive React & Tailwind UI.</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">React.js</span>
-                        <span class="tech-badge">Tailwind CSS</span>
-                        <span class="tech-badge">Node.js</span>
-                        <span class="tech-badge">Express.js</span>
-                        <span class="tech-badge">MongoDB</span>
-                    </div>
-                    <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="project">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3><a href="#" target="_blank">Weather Forecast App</a></h3>
-                    </div>
-                    <p>A real-time weather app that provides accurate weather forecasts for any location worldwide with beautiful UI.</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">React.js</span>
-                        <span class="tech-badge">HTML & CSS</span>
-                        <span class="tech-badge">API Integration</span>
-                        <span class="tech-badge">JavaScript</span>
-                    </div>
-                    <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
+            <div class="edu-courses">
+              <span>Algorithms</span>
+              <span>AI</span>
+              <span>OS</span>
+              <span>Web Technology</span>
+              <span>Cloud Computing</span>
             </div>
+          </div>
         </div>
-    </section>
-    
-
-    <!-- Certification Section -->
-    <section id="certification" class="section">
-        <div class="container">
-            <h2>Certifications & Credentials</h2>
-            <div class="certifications-grid">
-                <div class="certification-item">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Full Stack Web Development</h3>
-                    <p class="cert-issuer">Edu-Versity</p>
-                    <a href="https://cert.diceid.com/cid/ifPTeh9BMO" target="_blank" class="cert-link">View Credential</a>
-                </div>
-
-                <div class="certification-item">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Mastering Algorithms & Data Structures</h3>
-                    <p class="cert-issuer">CodeSignal</p>
-                    <a href="https://codesignal.com/learn/certificates/cmcq58phy0010jr04d1ous86s/course-paths/9" target="_blank" class="cert-link">View Credential</a>
-                </div>
-
-                <div class="certification-item">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Advanced SQL - Skill Test</h3>
-                    <p class="cert-issuer">HackerRank</p>
-                    <a href="https://www.hackerrank.com/certificates/iframe/2bb9af19c3ba" target="_blank" class="cert-link">View Credential</a>
-                </div>
-
-                <div class="certification-item">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Python Programming</h3>
-                    <p class="cert-issuer">Great Learning Academy</p>
-                    <a href="https://www.mygreatlearning.com/certificate/AIHKPNWD/" target="_blank" class="cert-link">View Credential</a>
-                </div>
+        <div class="edu-card reveal-up" style="animation-delay:.1s">
+          <div class="edu-icon"><i class="fas fa-university"></i></div>
+          <div class="edu-body">
+            <span class="edu-degree">Bachelor of Computer Applications (BCA)</span>
+            <h3 class="edu-school">Berhampur University</h3>
+            <p class="edu-location"><i class="fas fa-map-marker-alt"></i> Berhampur, India</p>
+            <div class="edu-meta">
+              <span class="edu-cgpa"><i class="fas fa-star"></i> CGPA: 8.70 / 10</span>
+              <span class="edu-year">2021 – 2024</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
+            <div class="edu-courses">
+              <span>DSA</span>
+              <span>Software Engineering</span>
+              <span>DBMS</span>
+              <span>OOP</span>
             </div>
-            <p class="contact-message">If you would like to discuss a project or just want to say hello, feel free to reach out!</p>
-            <div class="social-links">
-                <a href="mailto:bibek.s1969@gmail.com" class="social-icon" aria-label="Email" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/bibek-samantray" class="social-icon" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/bibeksamantray" class="social-icon" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://leetcode.com/u/Bibek_Samantray/" class="social-icon" aria-label="LeetCode" title="LeetCode" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-code"></i>
-                </a>
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="year"></span> Bibek Samantray | All Rights Reserved</p>
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-label">Skills</div>
+      <h2 class="section-title reveal-up">Tech Arsenal</h2>
+      <div class="skills-grid">
+        <div class="skill-card reveal-up" style="animation-delay:.05s">
+          <div class="skill-card-icon"><i class="fas fa-code"></i></div>
+          <h3>Languages</h3>
+          <ul>
+            <li><span class="skill-dot"></span>Java</li>
+            <li><span class="skill-dot"></span>JavaScript</li>
+            <li><span class="skill-dot"></span>Python</li>
+            <li><span class="skill-dot"></span>C &amp; C++</li>
+          </ul>
         </div>
-    </footer>
+        <div class="skill-card reveal-up" style="animation-delay:.1s">
+          <div class="skill-card-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3>Front-end</h3>
+          <ul>
+            <li><span class="skill-dot"></span>HTML5 &amp; CSS3</li>
+            <li><span class="skill-dot"></span>React.js</li>
+            <li><span class="skill-dot"></span>Tailwind CSS</li>
+            <li><span class="skill-dot"></span>Responsive Design</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal-up" style="animation-delay:.15s">
+          <div class="skill-card-icon"><i class="fas fa-server"></i></div>
+          <h3>Back-end</h3>
+          <ul>
+            <li><span class="skill-dot"></span>Node.js</li>
+            <li><span class="skill-dot"></span>Express.js</li>
+            <li><span class="skill-dot"></span>RESTful APIs</li>
+            <li><span class="skill-dot"></span>FastAPI</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal-up" style="animation-delay:.2s">
+          <div class="skill-card-icon"><i class="fas fa-database"></i></div>
+          <h3>Databases</h3>
+          <ul>
+            <li><span class="skill-dot"></span>MySQL</li>
+            <li><span class="skill-dot"></span>MongoDB</li>
+            <li><span class="skill-dot"></span>Database Design</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal-up" style="animation-delay:.25s">
+          <div class="skill-card-icon"><i class="fas fa-tools"></i></div>
+          <h3>Tools &amp; Platforms</h3>
+          <ul>
+            <li><span class="skill-dot"></span>AWS</li>
+            <li><span class="skill-dot"></span>Git &amp; GitHub</li>
+            <li><span class="skill-dot"></span>VS Code</li>
+            <li><span class="skill-dot"></span>MS Office</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal-up" style="animation-delay:.3s">
+          <div class="skill-card-icon"><i class="fas fa-brain"></i></div>
+          <h3>Core Competencies</h3>
+          <ul>
+            <li><span class="skill-dot"></span>DSA</li>
+            <li><span class="skill-dot"></span>OOP</li>
+            <li><span class="skill-dot"></span>SDLC &amp; Agile</li>
+            <li><span class="skill-dot"></span>Problem Solving</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- ── PROJECTS ── -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-label">Projects</div>
+      <h2 class="section-title reveal-up">Featured Work</h2>
+      <div class="projects-grid">
+
+        <div class="project-card reveal-up" style="animation-delay:.05s">
+          <div class="project-number">01</div>
+          <div class="project-icon-wrap">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3 class="project-name">AI-Powered Resume Screening System</h3>
+          <p class="project-desc">An AI-driven resume screening system that automates resume parsing and candidate–job matching using LLMs and NLP techniques.</p>
+          <div class="project-stack">
+            <span>Python</span><span>FastAPI</span><span>Ollama</span><span>NLP</span><span>HTML/CSS/JS</span>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="proj-link" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> View Project
+            </a>
+            <a href="#" class="proj-link proj-gh" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" style="animation-delay:.1s">
+          <div class="project-number">02</div>
+          <div class="project-icon-wrap">
+            <i class="fas fa-microphone"></i>
+          </div>
+          <h3 class="project-name">AI Audio-to-Notes Generator</h3>
+          <p class="project-desc">A fully local, open-source system that converts lecture audio into structured transcripts and AI-generated study notes using LLMs.</p>
+          <div class="project-stack">
+            <span>Python</span><span>FastAPI</span><span>MongoDB</span><span>Ollama</span><span>Faster-Whisper</span>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="proj-link" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> View Project
+            </a>
+            <a href="#" class="proj-gh proj-link" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" style="animation-delay:.15s">
+          <div class="project-number">03</div>
+          <div class="project-icon-wrap">
+            <i class="fas fa-vote-yea"></i>
+          </div>
+          <h3 class="project-name">E-Voting System</h3>
+          <p class="project-desc">A secure, role-based voting application with JWT authentication, real-time vote tracking, and a responsive React & Tailwind UI.</p>
+          <div class="project-stack">
+            <span>React.js</span><span>Tailwind CSS</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="proj-link" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> View Project
+            </a>
+            <a href="#" class="proj-gh proj-link" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" style="animation-delay:.2s">
+          <div class="project-number">04</div>
+          <div class="project-icon-wrap">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h3 class="project-name">Weather Forecast App</h3>
+          <p class="project-desc">A real-time weather app that provides accurate forecasts for any location worldwide with a beautiful, intuitive UI.</p>
+          <div class="project-stack">
+            <span>React.js</span><span>HTML &amp; CSS</span><span>API Integration</span><span>JavaScript</span>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="proj-link" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> View Project
+            </a>
+            <a href="#" class="proj-gh proj-link" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICATIONS ── -->
+  <section id="certification" class="section">
+    <div class="container">
+      <div class="section-label">Credentials</div>
+      <h2 class="section-title reveal-up">Certifications</h2>
+      <div class="certs-grid">
+
+        <a href="https://cert.diceid.com/cid/ifPTeh9BMO" target="_blank" rel="noopener" class="cert-card reveal-up">
+          <div class="cert-glyph"><i class="fas fa-layer-group"></i></div>
+          <div class="cert-body">
+            <h3>Full Stack Web Development</h3>
+            <p>Edu-Versity</p>
+          </div>
+          <div class="cert-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+
+        <a href="https://codesignal.com/learn/certificates/cmcq58phy0010jr04d1ous86s/course-paths/9" target="_blank" rel="noopener" class="cert-card reveal-up" style="animation-delay:.08s">
+          <div class="cert-glyph"><i class="fas fa-diagram-project"></i></div>
+          <div class="cert-body">
+            <h3>Mastering Algorithms &amp; Data Structures</h3>
+            <p>CodeSignal</p>
+          </div>
+          <div class="cert-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+
+        <a href="https://www.hackerrank.com/certificates/iframe/2bb9af19c3ba" target="_blank" rel="noopener" class="cert-card reveal-up" style="animation-delay:.16s">
+          <div class="cert-glyph"><i class="fas fa-database"></i></div>
+          <div class="cert-body">
+            <h3>Advanced SQL — Skill Test</h3>
+            <p>HackerRank</p>
+          </div>
+          <div class="cert-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+
+        <a href="https://www.mygreatlearning.com/certificate/AIHKPNWD/" target="_blank" rel="noopener" class="cert-card reveal-up" style="animation-delay:.24s">
+          <div class="cert-glyph"><i class="fab fa-python"></i></div>
+          <div class="cert-body">
+            <h3>Python Programming</h3>
+            <p>Great Learning Academy</p>
+          </div>
+          <div class="cert-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title reveal-up">Let's Connect</h2>
+      <div class="contact-grid">
+        <div class="contact-left reveal-up">
+          <p class="contact-intro">Have a project in mind, want to collaborate, or just want to say hello? My inbox is always open.</p>
+          <div class="contact-items">
+            <a href="mailto:bibek.s1969@gmail.com" class="contact-item">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="ci-label">Email</span>
+                <span class="ci-value">bibek.s1969@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/bibeksamantray2003/" target="_blank" rel="noopener" class="contact-item">
+              <div class="ci-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <span class="ci-label">LinkedIn</span>
+                <span class="ci-value">/in/bibeksamantray2003</span>
+              </div>
+            </a>
+            <a href="https://github.com/bibeksamantray" target="_blank" rel="noopener" class="contact-item">
+              <div class="ci-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="ci-label">GitHub</span>
+                <span class="ci-value">/bibeksamantray</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal-up" style="animation-delay:.15s" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; <span id="year"></span> Bibek Samantray — All Rights Reserved</p>
+      <div class="footer-social">
+        <a href="mailto:bibek.s1969@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/bibeksamantray2003/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/bibeksamantray" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://leetcode.com/u/Bibek_Samantray/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
-
